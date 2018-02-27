@@ -120,9 +120,13 @@ $arrTasks = [
                     <label class="checkbox">
                         <a href="/">
                             <!--добавить сюда аттрибут "checked", если переменная $show_complete_tasks равна единице-->
+                            <?php if ($show_complete_tasks == 1): ?>
                             <input class="checkbox__input visually-hidden"
-                                   type="checkbox" <?= ($show_complete_tasks == 1) ? 'checked' : '' ?>>
-                            <span class="checkbox__text">Показывать выполненные</span>
+                                <span class="checkbox__text">Показывать выполненные</span>
+                            <?php else: ?>
+                                <input class="checkbox__input visually-hidden" type="checkbox">
+                                <span class="checkbox__text">Показывать выполненные</span>
+                            <?php endif; ?>
                         </a>
                     </label>
                 </div>
