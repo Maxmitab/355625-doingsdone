@@ -1,4 +1,7 @@
 <?php
+
+$update = 'check cmder';
+
 // показывать или нет выполненные задачи
 $show_complete_tasks = rand(0, 1);
 
@@ -89,7 +92,7 @@ $arrTasks = [
                     <ul class="main-navigation__list">
                         <?php
                         foreach ($arrProj as $itemNumber => $item):?>
-                            <li class="main-navigation__list-item<?= ($itemNumber === 0) ? '--active' : '' ?>">
+                            <li class="main-navigation__list-item<?= ($item === 'Все') ? '--active' : '' ?>">
                                 <a class="main-navigation__list-item-link" href="#"><?= $item ?></a>
                                 <span class="main-navigation__list-item-count">24</span>
                             </li>
